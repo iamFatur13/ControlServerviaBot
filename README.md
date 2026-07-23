@@ -47,9 +47,12 @@ Terpikir untuk memanfaatkan API Telegram dengan membuat bot internal yang tetap 
 
 ### 1. Clone atau Download Repository
 Download file `server_bot.py` atau clone repository ini ke folder server Anda:
+
 <pre>
 ```bash
+```
 git clone [https://github.com/username-anda/windows-telegram-control-bot.git](https://github.com/username-anda/windows-telegram-control-bot.git)
+
 cd windows-telegram-control-bot'
 </pre>
 
@@ -112,7 +115,4 @@ Start in: C:\path\ke\folder\bot\anda
 
 ## 📝 Catatan Tambahan
 Aplikasi ini dikembangkan secara sederhana sesuai kebutuhan spesifik untuk manajemen darurat server/VM lokal. Dibuat ringan tanpa dependency yang rumit agar mudah dipasang di environment Windows apa saja.
-
-
-
 
