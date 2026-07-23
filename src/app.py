@@ -5,8 +5,8 @@ from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 
 # ================= KELOLA KONFIGURASI =================
-BOT_TOKEN = "8879348804:AAFbmJzhDmo9UZ7fnAv-Uv1bQ0acvsYqDUA"
-ALLOWED_USER_ID = 173826136  # Ganti dengan User ID Telegram Anda (tipe data Integer)
+BOT_TOKEN = "BOT_TOKEN"
+ALLOWED_USER_ID = ID_TELEGRAM  # Ganti dengan User ID Telegram Anda (tipe data Integer)
 # =======================================================
 
 logging.basicConfig(
