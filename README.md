@@ -64,8 +64,9 @@ Buka Command Prompt (CMD) di server dan install library yang dibutuhkan:
 
 Buka file server_bot.py menggunakan text editor (Notepad, VS Code, dll), lalu ubah baris variabel berikut:
 
-<pre>
+
 ```Python
+<pre>
 # ================= KELOLA KONFIGURASI =================
 BOT_TOKEN = "ISI_TOKEN_BOT_TELEGRAM_ANDA"
 ALLOWED_USER_ID = 123456789  # Ganti dengan User ID Telegram Anda (Integer)
