@@ -32,7 +32,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     pesan_bantuan = (
         "🤖 *Server Control Bot Active*\n\n"
         "Gunakan tombol di bawah atau ketik perintah berikut:\n\n"
-        "• `/ps` atau tombol *📋 Daftar Proses* - Menampilkan seluruh aplikasi berjalan\n"
+        "• `/ps` atau `/tasks` atau tombol *📋 Daftar Proses* - Menampilkan seluruh aplikasi berjalan\n"
         "• `/kill <nama/PID>` - Menghentikan aplikasi (contoh: `/kill notepad.exe`)\n"
         "• `/run <path_file.bat>` - Menjalankan file batch (contoh: `/run C:\\script\\backup.bat`)\n"
         "• `/cmd <perintah>` - Jalankan perintah CMD bebas"
