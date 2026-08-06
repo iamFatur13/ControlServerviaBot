@@ -116,3 +116,4 @@ Start in: C:\path\ke\folder\bot\anda
 ## 📝 Catatan Tambahan
 Aplikasi ini dikembangkan secara sederhana sesuai kebutuhan spesifik untuk manajemen darurat server/VM lokal. Dibuat ringan tanpa dependency yang rumit agar mudah dipasang di environment Windows apa saja.
 
+.
