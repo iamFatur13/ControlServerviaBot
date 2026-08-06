@@ -6,19 +6,14 @@ from dotenv import load_dotenv
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 
-<<<<<<< HEAD
+
 # ================= KELOLA KONFIGURASI (.env) =================
 load_dotenv()  # Membaca file .env
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 ALLOWED_USER_ID = int(os.getenv("ALLOWED_USER_ID", 0))
 # =============================================================
-=======
-# ================= KELOLA KONFIGURASI =================
-BOT_TOKEN = "BOT_TOKEN"
-ALLOWED_USER_ID = ID_TELEGRAM  # Ganti dengan User ID Telegram Anda (tipe data Integer)
-# =======================================================
->>>>>>> e5736766e4e13006037e9b7678227c2473bd32e8
+
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -31,12 +26,13 @@ def is_authorized(user_id: int) -> bool:
 
 def get_main_keyboard():
     """Membuat tombol menu utama yang selalu muncul di bawah chat."""
+    # Pastikan struktur list-nya adalah list dalam list: [[baris 1], [baris 2]]
     keyboard = [
-        [ KeyboardButton("📋 Daftar Proses"), KeyboardButton("📸 Screenshot Layar")]
-        [ KeyboardButton("❓ Menu Utama / Bantuan")]
+        [KeyboardButton("📋 Daftar Proses"), KeyboardButton("📸 Screenshot Layar")],
+        [KeyboardButton("❓ Menu Utama / Bantuan")]
     ]
     return ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
-
+    
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not is_authorized(update.effective_user.id):
         return
@@ -44,12 +40,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     pesan_bantuan = (
         "🤖 *Server Control Bot Active*\n\n"
         "Gunakan tombol di bawah atau ketik perintah berikut:\n\n"
-<<<<<<< HEAD
         "• `/ps` atau tombol *📋 Daftar Proses* - Menampilkan seluruh aplikasi berjalan\n"
         "• `/shot` atau *📸 Screenshot Layar* - Mengambil foto layar aktif desktop\n"
-=======
         "• `/ps` atau `/tasks` atau tombol *📋 Daftar Proses* - Menampilkan seluruh aplikasi berjalan\n"
->>>>>>> e5736766e4e13006037e9b7678227c2473bd32e8
         "• `/kill <nama/PID>` - Menghentikan aplikasi (contoh: `/kill notepad.exe`)\n"
         "• `/run <path_file.bat>` - Menjalankan file batch (contoh: `/run C:\\script\\backup.bat`)\n"
         "• `/cmd <perintah>` - Jalankan perintah CMD bebas"
