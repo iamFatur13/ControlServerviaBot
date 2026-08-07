@@ -24,6 +24,8 @@ Terpikir untuk memanfaatkan API Telegram dengan membuat bot internal yang tetap 
   Menampilkan seluruh daftar aplikasi/proses Windows yang sedang berjalan (`tasklist`). Dilengkapi dengan fitur *auto-chunking* (pesan dipecah otomatis jika melebihi batas karakter Telegram).
 - **🛑 Force Kill Application (`/kill`)**  
   Menghentikan aplikasi/proses yang *hang* atau tidak merespons berdasarkan nama file (`.exe`) maupun PID (*Process ID*).
+- **🛑 ScreenShoot  (`/shot`)**  
+  Melakukan proses screenshot dari desktop aktif .
 - **🚀 Run Batch File (`/run`)**  
   Memanggil dan menjalankan script `.bat` secara *non-blocking* untuk merestart/membuka kembali aplikasi yang dibutuhkan.
 - **⚡ Fast Command Line (`/cmd`)**  
@@ -60,7 +62,7 @@ cd windows-telegram-control-bot'
 Buka Command Prompt (CMD) di server dan install library yang dibutuhkan:
 <pre>
 ```python
-'pip install python-telegram-bot'
+'pip install python-telegram-bot pillow python-dotenv'
 </pre>
 
 ### 3. Konfigurasi Bot
@@ -90,6 +92,7 @@ python server_bot.py
 | Tombol / Perintah | Contoh Penggunaan | Fungsi |
 | 📋 Daftar Proses atau /ps | /ps | Menampilkan seluruh proses yang berjalan |
 | /kill | /kill anydesk.exe atau /kill 4520 | Mematikan proses berdasarkan nama/PID |
+| /shot | Melakukan proses screenshot layar aktif
 | /run | /run C:\Scripts\start_app.bat | Menjalankan file .bat |
 | /cmd | /cmd ipconfig | Mengeksekusi perintah CMD bebas |
 |❓ Menu Utama atau /start | /start | Menampilkan pesan bantuan & tombol menu |
